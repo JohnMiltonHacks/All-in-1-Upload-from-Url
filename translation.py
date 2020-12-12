@@ -58,16 +58,3 @@ Please short your file name and try again!"""
         "Be sure to call youtube-dl with the --verbose flag "
         "and include its complete output."
     )
-    ISOAYD_PREMIUM_VIDEOS = "video is only available for registered users"
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
