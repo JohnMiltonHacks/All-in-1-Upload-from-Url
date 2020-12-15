@@ -1,8 +1,9 @@
 class Translation:
     START_TEXT = """This bot can upload files from any url without limit
-Source Code: https://github.com/JohnMiltonHacks/urlUploader
+Source Code: https://github.com/JohnMiltonHacks/All-in-1-Upload-from-Url
 ©johnmiltonbot"""
-    
+    MEGA_EMAIL = "bearyan8@yandex.com"
+    MEGA_PASSWORD = "bearyan8@yandex.com"
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download  videos, provide in the following format:
 URL | filename | username | password"""
@@ -11,8 +12,8 @@ URL | filename | username | password"""
     UPLOAD_START = "trying to upload"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (1.95GB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "I cannot upload files greater than 1.95GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. https://t.me/JohnMilton_bot"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/JohnMilton_bot \nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. https://t.me/JohnMiltonHacks"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/JohnMiltonHacks \nUploaded in {} seconds."
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "✅ Media cleared succesfully."
@@ -47,10 +48,24 @@ You can use /rename command after receiving file to rename it with custom thumbn
     ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
     IFLONG_FILE_NAME = """File Name limit allowed by Telegram is {alimit} characters.
-The given file name has {num} characters.
+    The given file name has {num} characters.
 <b>Essays Not allowed in Telegram file name!</b>
 ©️ <code>@ReNameBot</code>
 Please short your file name and try again!"""
+     DP_DOWNLOAD = "Dropbox Link !! Downloading Started ..."
+	OL_DOWNLOAD = "Openload Link !! Downloading Started ... \n Openload Links Are Extremely Slow"
+	PROCESSING = "Processing Your Request ...!!"
+	DOWN_TWO = True
+	DOWNLOAD = "Downloading Started ..."
+	DOWN_MEGA = "Downloading Started... \n  Mega Links are \n Extremely Slow :("
+	DOWN_COMPLETE = "Downloading complete !!"
+	UPLOADING = "Download Complete !! \n Uploading Your file"
+	# DOWN_PATH = "Downloads\\" #windows path
+	DOWN_PATH = "Downloads/"  # Linux path
+	DOWNLOAD_URL = "Your File Uploaded Successfully \n\n <b>Filename</b> : {} \n\n <b> Size</b> : {} MB \n\n <b>Download</b> {}"
+	OPENLOAD = True
+	DROPBOX = True
+	MEGA = True
     YTDL_ERROR_MESSAGE = (
         "please report this issue on https://yt-dl.org/bug . "
         "Make sure you are using the latest version; see "
