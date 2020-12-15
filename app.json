@@ -73,9 +73,7 @@
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
   }, {
     "url": "heroku/python"
-  },{
-      "url":"https://github.com/aryanvikash/Google-Drive-Uploader/blob/master/bot.py"
-     }],
+  }],
   "formation": {
     "worker": {
       "quantity": 1,
