@@ -9,3 +9,10 @@ requests
 tgcrypto
 youtube-dl
 olefile
+python-telegram-bot==12.0.0b1
+pySmartDL
+PyDrive
+urllib3
+URLObject>=2.1.1
+pycrypto>=2.6
+httplib2==0.15.0
