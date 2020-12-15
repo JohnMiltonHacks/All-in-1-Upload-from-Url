@@ -95,6 +95,21 @@ async def echo(bot, update):
             print("Downloading Complete : {}".format(filename))
             sent_message.edit_text(translation.DOWN_COMPLETE)
             DownloadStatus = True
+            await bot.send_document(
+                    chat_id=update.message.chat.id,
+                    document=download_directory,
+                    thumb=thumb_image_path,
+                    caption=description,
+                    parse_mode="HTML",
+                    # reply_markup=reply_markup,
+                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    progress=progress_for_pyrogram,
+                    progress_args=(
+                        Translation.UPLOAD_START,
+                        update.message,
+                        start_time
+                    )
+                )
            # Here IS Mega Links stuffs
         elif 'mega.nz' in url:
 
@@ -105,8 +120,24 @@ async def echo(bot, update):
                 filename = m.download_from_url(url)
                 print("Downloading Complete Mega :", filename)
                 sent_message.edit_text(translation.DOWN_COMPLETE)
+                
 
                 DownloadStatus = True
+                await bot.send_document(
+                    chat_id=update.message.chat.id,
+                    document=download_directory,
+                    thumb=thumb_image_path,
+                    caption=description,
+                    parse_mode="HTML",
+                    # reply_markup=reply_markup,
+                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    progress=progress_for_pyrogram,
+                    progress_args=(
+                        Translation.UPLOAD_START,
+                        update.message,
+                        start_time
+                    )
+                )
             except Exception as e:
                 print("Mega Downloding Error :", e)
                 sent_message.edit_text("Mega Downloading Error !!")
@@ -122,6 +153,21 @@ async def echo(bot, update):
                 print("Downloading Complete : {}".format(filename))
                 sent_message.edit_text(translation.DOWN_COMPLETE)
                 DownloadStatus = True
+                await bot.send_document(
+                    chat_id=update.message.chat.id,
+                    document=download_directory,
+                    thumb=thumb_image_path,
+                    caption=description,
+                    parse_mode="HTML",
+                    # reply_markup=reply_markup,
+                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    progress=progress_for_pyrogram,
+                    progress_args=(
+                        Translation.UPLOAD_START,
+                        update.message,
+                        start_time
+                    )
+                )
 
             except Exception as e:
                 # switch To second download(SmartDl Downloader) `You can activate it throungh TEXT file`
@@ -135,6 +181,21 @@ async def echo(bot, update):
                         obj.start()
                         filename = obj.get_dest()
                         DownloadStatus = True
+                        await bot.send_document(
+                    chat_id=update.message.chat.id,
+                    document=download_directory,
+                    thumb=thumb_image_path,
+                    caption=description,
+                    parse_mode="HTML",
+                    # reply_markup=reply_markup,
+                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    progress=progress_for_pyrogram,
+                    progress_args=(
+                        Translation.UPLOAD_START,
+                        update.message,
+                        start_time
+                    )
+                )
                     except Exception as e:
                         print(e)
                         sent_message.edit_text(
