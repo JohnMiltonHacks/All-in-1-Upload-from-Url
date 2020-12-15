@@ -67,7 +67,7 @@ async def echo(bot, update):
     url = update.text
     url = url.split()[-1]
     sent_message = context.bot.send_message(
-        chat_id=update.message.chat_id, text=translation.PROCESSING)
+        chat_id=update.message.chat_id, text=Translation.PROCESSING)
 
     ID = update.message.chat_id
     ID = str(ID)
@@ -89,11 +89,11 @@ async def echo(bot, update):
             filename = url.split("/")[-1]
             print("Dropbox link Downloading Started : {}".format(
                 url.split("/")[-1]))
-            sent_message.edit_text(translation.DP_DOWNLOAD)
+            sent_message.edit_text(Translation.DP_DOWNLOAD)
             # filename = wget.download(url)
             filename = wget_dl(str(url))
             print("Downloading Complete : {}".format(filename))
-            sent_message.edit_text(translation.DOWN_COMPLETE)
+            sent_message.edit_text(Translation.DOWN_COMPLETE)
             DownloadStatus = True
             await bot.send_document(
                     chat_id=update.message.chat.id,
@@ -115,11 +115,11 @@ async def echo(bot, update):
 
             try:
                 print("Downlaoding Started")
-                sent_message.edit_text(translation.DOWN_MEGA)
-                m = Mega.from_credentials(translation.MEGA_EMAIL, translation.MEGA_PASSWORD)
+                sent_message.edit_text(Translation.DOWN_MEGA)
+                m = Mega.from_credentials(Translation.MEGA_EMAIL, Translation.MEGA_PASSWORD)
                 filename = m.download_from_url(url)
                 print("Downloading Complete Mega :", filename)
-                sent_message.edit_text(translation.DOWN_COMPLETE)
+                sent_message.edit_text(Translation.DOWN_COMPLETE)
                 
 
                 DownloadStatus = True
@@ -147,11 +147,11 @@ async def echo(bot, update):
                 filename = url.split("/")[-1]
 
                 print("Downloading Started : {}".format(url.split("/")[-1]))
-                sent_message.edit_text(translation.DOWNLOAD)
+                sent_message.edit_text(Translation.DOWNLOAD)
                 # filename = wget.download(url)
                 filename = wget_dl(str(url))
                 print("Downloading Complete : {}".format(filename))
-                sent_message.edit_text(translation.DOWN_COMPLETE)
+                sent_message.edit_text(Translation.DOWN_COMPLETE)
                 DownloadStatus = True
                 await bot.send_document(
                     chat_id=update.message.chat.id,
@@ -171,8 +171,8 @@ async def echo(bot, update):
 
             except Exception as e:
                 # switch To second download(SmartDl Downloader) `You can activate it throungh TEXT file`
-                if translation.DOWN_TWO:
-                    print(translation.DOWN_TWO)
+                if Translation.DOWN_TWO:
+                    print(Translation.DOWN_TWO)
                     try:
                         sent_message.edit_text(
                             "Downloader 1 Error:{} \n\n Downloader 2 :Downloading Started...".format(e))
